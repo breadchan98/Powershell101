@@ -1,1 +1,22 @@
 This is for taking notes and references for the future.
+
+My boy JackedProgrammer for learning PowerShell----
+
+Fundamentals:
+- $psversiontable.psversion == Used to grab the version of PowerShell
+- pwsh - Command line version to launch powershell 
+- .ps1 file extension of PowerShell
+- PowerShell has not changed from all over their versions.. all versions follow a "Verb-Noun" command, called cmdlets
+- Some builds or scripts dont necessary follow the "verb-noun" command, however this is the most common and basic
+- Run Selection is different from Run the whole script, in terms of format
+    -- Run selection will have a different output than run whole due to following a format from the previous cmdlets
+- Thousands of cmdlets exist, but knowing two cmdlets will help a lot
+    1. Get-Command - typing this will load all available cmdlets
+        -- if you forgot the name of a command, but remember the noun "ex; Service" run:
+                "Get-Command -noun "The word"
+                Get-Command -noun Service
+            Same applies for verb, but replace with -Verb, instead of -Noun
+    2. Get-Help cmdlets -full
+        -- This will show the full detailed information of a cmdlet
+        -- Shows if the parameters are required to be added in the command, etc.
+        -- Aliases in the get-help parameters are kinda like shortcuts, if you dont feel like typing the whole commandlet
