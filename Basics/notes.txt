@@ -66,3 +66,5 @@ Variables:
     $myVariable = 1.2       --- This will return double (1.2)
     [int]$myVariable = 1.2  --- This will return integer (1)
 - We can store cmdlets in variables and run it to get the output.
+
+Array and ArrayLists:
