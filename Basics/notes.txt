@@ -68,3 +68,6 @@ Variables:
 - We can store cmdlets in variables and run it to get the output.
 
 Array and ArrayLists:
+ - Array vs ArrayLists
+    --> Arrays good for small data sets, good for fast quick retrievals
+    --> ArrayLists are good for more large data sets and performance, but may require a lot of time to work on
