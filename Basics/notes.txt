@@ -37,3 +37,32 @@ Fundamentals:
         Example:
         PS C:\Users\bred-pc> Set-ExecutionPolicy -ExecutionPolicy Unrestricted -WhatIf
         What if: Performing the operation "Set-ExecutionPolicy" on target "Unrestricted".
+
+
+Variables:
+- Variables act the same way in PowerShell as in other programming languages, except we declare them differently
+- They are meant for storing values (basics of Programming 101 kinda meme)
+- To declare variables:
+    --> $variableName
+    --> $variableName.methods
+    Example:
+        Script:
+        $helloWorld = "Hello World"
+        $helloWorld.GetType()
+
+        Output:
+        IsPublic IsSerial Name                                     BaseType
+        -------- -------- ----                                     --------
+        True     True     String                                   System.Object 
+- If a variable with no value is run, it returns null
+    --> However, if you want to get an error as a reminder, add "Set-StrictMode -Version latest" at the first line of the script
+- $true or $false as the value returns the boolean
+    Example:
+        $isBool = $true 
+- Signs do not work for comparison, you must use ex:
+    --> -eq is used for "=="
+- Adding [data type] $variableName, this will convert based on data type (strictly speaking)
+    Example:
+    $myVariable = 1.2       --- This will return double (1.2)
+    [int]$myVariable = 1.2  --- This will return integer (1)
+- We can store cmdlets in variables and run it to get the output.
