@@ -52,3 +52,13 @@ $myArray = $myArray -ne "Strawberry"
 
 #After removing Strawberry
 $myArray
+
+########################################################################
+<#
+    ArrayList > Array, especially if you dont know how big is your array
+    and to prevent any performance hiccups
+
+    To declare an ArrayList:
+    $listVar=[System.Collections.ArrayList]@()
+
+#>
