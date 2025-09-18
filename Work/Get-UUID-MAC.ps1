@@ -4,8 +4,9 @@ Get-Content .\ascii.txt
 #Secured Creds
 $cred = Get-Credential -Message "Enter Credentials"
 
-##Using brent shared path
-New-PSDrive -Name "Z" -PSProvider FileSystem -Root "\\MLS037SVC00\mlsredfs01\Shares\Teams\B37 Site Services\Brent" -Credential $cred -Persist
+#custom share path
+$networkPath = Read-Host "Enter drive path starting \\"
+New-PSDrive -Name "Z" -PSProvider FileSystem -Root $networkPath -Credential $cred -Persist
 
 #New Folder
 $folderNewName = Read-Host "Enter RITM folder name"
