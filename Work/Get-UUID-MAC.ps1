@@ -1,16 +1,33 @@
 Set-StrictMode -Version Latest
+Get-Content .\ascii.txt
+
+#Secured Creds
+$cred = Get-Credential -Message "Enter Credentials"
+
+##Using brent shared path
+New-PSDrive -Name "Z" -PSProvider FileSystem -Root "\\MLS037SVC00\mlsredfs01\Shares\Teams\B37 Site Services\Brent" -Credential $cred -Persist
+
+#New Folder
+$folderNewName = Read-Host "Enter RITM folder name"
+
+if(Test-Path -Path "Z:\$folderNewName" -PathType Container) {
+    Write-Host "Skipping as Folder $folderNewName exists"
+}
+else {
+    New-Item -Path "Z:\$folderNewName" -ItemType Directory
+}
 
 #Used for creating the file
 $machineName = Read-Host "Enter name of machine"
-New-Item -Path "C:\Users\bred-pc\Desktop\Work\Data\$machineName.txt" -ItemType File
+New-Item -Path "Z:\$folderNewName\$machineName.txt" -ItemType File
 
 #Creating separate mac log for extracting
 $ipAddress = cmd.exe /c "ipconfig /all"
-New-Item -Path "Z:\RITM2438749\MAC logs\$machineName.MAC.txt" -ItemType File
-Add-Content -Path "Z:\RITM2438749\MAC logs\$machineName.MAC.txt" -Value $ipAddress
+New-Item -Path "Z:\$folderNewName\MAC logs\$machineName.MAC.txt" -ItemType File
+Add-Content -Path "Z:\$folderNewName\MAC logs\$machineName.MAC.txt" -Value $ipAddress
 
 #Finds pattern string
-$macAddress = Get-Content "Z:RITM2438749\MAC logs\$machineName.MAC.txt" | Select-String -Pattern "Physical","Description"
+$macAddress = Get-Content "Z:\$folderNewName\MAC logs\$machineName.MAC.txt" | Select-String -Pattern "Physical","Description"
 
 #Show UUID and MAC
 $uuidMacLines = @(
@@ -18,6 +35,6 @@ $uuidMacLines = @(
     " "
     $macAddress
     )
-Add-Content -Path "Z:\RITM2438749\$machineName.txt" -Value $uuidMacLines
+Add-Content -Path "Z:\$folderNewName\$machineName.txt" -Value $uuidMacLines
 
 cmd.exe /c "net use Z: /delete"
