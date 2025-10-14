@@ -1,34 +1,34 @@
 Set-StrictMode -Version Latest
-Get-Content .\ascii.txt
 
 #Secured Creds
 $cred = Get-Credential -Message "Enter Credentials"
+$driveLetter = Read-Host "Enter Drive Letter"
+New-PSDrive -Name "$driveLetter" -PSProvider FileSystem -Root "\\MLS037SVC00\mlsredfs01\Shares\Teams\B37 Site Services\Brent\" -Credential $cred -Persist
 
-#custom share path
-$networkPath = Read-Host "Enter drive path starting \\"
-New-PSDrive -Name "Z" -PSProvider FileSystem -Root $networkPath -Credential $cred -Persist
+#Enter RITM Number
+$ritmNum = Read-Host "Enter RITM number"
+$directoryPath = "${driveLetter}:\$ritmNum"
+#RITM Number place holder
 
-#New Folder
-$folderNewName = Read-Host "Enter RITM folder name"
-
-if(Test-Path -Path "Z:\$folderNewName" -PathType Container) {
-    Write-Host "Skipping as Folder $folderNewName exists"
+#if Directory exists
+if(Test-Path $directoryPath) {
+    Write-Output "$directoryPath exists" 
 }
 else {
-    New-Item -Path "Z:\$folderNewName" -ItemType Directory
+    New-Item -Path $directoryPath -ItemType Directory
 }
 
 #Used for creating the file
 $machineName = Read-Host "Enter name of machine"
-New-Item -Path "Z:\$folderNewName\$machineName.txt" -ItemType File
+New-Item -Path "$directoryPath\$machineName.txt" -ItemType File
 
 #Creating separate mac log for extracting
 $ipAddress = cmd.exe /c "ipconfig /all"
-New-Item -Path "Z:\$folderNewName\MAC logs\$machineName.MAC.txt" -ItemType File
-Add-Content -Path "Z:\$folderNewName\MAC logs\$machineName.MAC.txt" -Value $ipAddress
+New-Item -Path "$directoryPath\MAC logs\$machineName.MAC.txt" -ItemType File
+Add-Content -Path "$directoryPath\MAC logs\$machineName.MAC.txt" -Value $ipAddress
 
 #Finds pattern string
-$macAddress = Get-Content "Z:\$folderNewName\MAC logs\$machineName.MAC.txt" | Select-String -Pattern "Physical","Description"
+$macAddress = Get-Content "$directoryPath\MAC logs\$machineName.MAC.txt" | Select-String -Pattern "Physical","Description"
 
 #Show UUID and MAC
 $uuidMacLines = @(
@@ -36,6 +36,6 @@ $uuidMacLines = @(
     " "
     $macAddress
     )
-Add-Content -Path "Z:\$folderNewName\$machineName.txt" -Value $uuidMacLines
+Add-Content -Path "$directoryPath\$machineName.txt" -Value $uuidMacLines
 
-cmd.exe /c "net use Z: /delete"
+cmd.exe /c "net use ${driveletter}: /delete"
