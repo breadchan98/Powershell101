@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\bred-pc\\.nuget\\packages\\": {}
+    "C:\\Users\\v-bbuenarte\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bred-pc\\Desktop\\Powershell101\\Powershell101\\C# Lessons\\C# Lessons.csproj",
+      "projectUniqueName": "C:\\Users\\v-bbuenarte\\Desktop\\Work\\Powershell101\\C# Lessons\\C# Lessons.csproj",
       "projectName": "C# Lessons",
-      "projectPath": "C:\\Users\\bred-pc\\Desktop\\Powershell101\\Powershell101\\C# Lessons\\C# Lessons.csproj",
-      "packagesPath": "C:\\Users\\bred-pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bred-pc\\Desktop\\Powershell101\\Powershell101\\C# Lessons\\obj\\",
+      "projectPath": "C:\\Users\\v-bbuenarte\\Desktop\\Work\\Powershell101\\C# Lessons\\C# Lessons.csproj",
+      "packagesPath": "C:\\Users\\v-bbuenarte\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\v-bbuenarte\\Desktop\\Work\\Powershell101\\C# Lessons\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\bred-pc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\v-bbuenarte\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
