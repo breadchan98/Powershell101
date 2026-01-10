@@ -5,7 +5,7 @@ $driveLetter = Read-Host "Enter Drive Letter for Network Path"
 New-PSDrive -Name "$driveLetter" -PSProvider FileSystem -Root "add a path" -Credential $cred -Persist
 
 #provide driver letter of USB drives
-$connectedDrives = (Read-Host "Enter drive letters (comma-separated") -split '\s+'
+$connectedDrives = (Read-Host "Enter drive letters (space-separated)") -split '\s+'
 
 $confirm = Read-Host "Format all drives? Type Y to Continue or press any key to skip"
 
