@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\v-bbuenarte\\Desktop\\Work\\Powershell101\\C# Lessons\\C# Lessons.csproj": {}
+    "C:\\Users\\v-bbuenarte\\OneDrive - Microsoft\\Desktop\\Work\\Powershell101\\C# Lessons\\C# Lessons.csproj": {}
   },
   "projects": {
-    "C:\\Users\\v-bbuenarte\\Desktop\\Work\\Powershell101\\C# Lessons\\C# Lessons.csproj": {
+    "C:\\Users\\v-bbuenarte\\OneDrive - Microsoft\\Desktop\\Work\\Powershell101\\C# Lessons\\C# Lessons.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\v-bbuenarte\\Desktop\\Work\\Powershell101\\C# Lessons\\C# Lessons.csproj",
+        "projectUniqueName": "C:\\Users\\v-bbuenarte\\OneDrive - Microsoft\\Desktop\\Work\\Powershell101\\C# Lessons\\C# Lessons.csproj",
         "projectName": "C# Lessons",
-        "projectPath": "C:\\Users\\v-bbuenarte\\Desktop\\Work\\Powershell101\\C# Lessons\\C# Lessons.csproj",
+        "projectPath": "C:\\Users\\v-bbuenarte\\OneDrive - Microsoft\\Desktop\\Work\\Powershell101\\C# Lessons\\C# Lessons.csproj",
         "packagesPath": "C:\\Users\\v-bbuenarte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\v-bbuenarte\\Desktop\\Work\\Powershell101\\C# Lessons\\obj\\",
+        "outputPath": "C:\\Users\\v-bbuenarte\\OneDrive - Microsoft\\Desktop\\Work\\Powershell101\\C# Lessons\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\v-bbuenarte\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
