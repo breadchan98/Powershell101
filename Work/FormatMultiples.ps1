@@ -2,7 +2,7 @@ Set-StrictMode -Version Latest
 
 $cred = Get-Credential -Message "Enter Credentials"
 $driveLetter = Read-Host "Enter Drive Letter for Network Path"
-New-PSDrive -Name "$driveLetter" -PSProvider FileSystem -Root "\\sesdfs\1windows\TestContent\CORE\Base\ES\Ops\ScoreEdge\Devices\Surface\SP11\Configure\DevOS\Staging\Cadmus_USB_Network_Recovery_V4.2_NoWTT_SP11XGA_01052026" -Credential $cred -Persist
+New-PSDrive -Name "$driveLetter" -PSProvider FileSystem -Root "add a path" -Credential $cred -Persist
 
 #provide driver letter of USB drives
 $connectedDrives = (Read-Host "Enter drive letters (comma-separated") -split '\s+'
