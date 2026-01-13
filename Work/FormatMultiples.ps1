@@ -12,5 +12,7 @@ if ($confirm -eq "N") {
 if ($confirm -eq "Y") {
     foreach ($drive in $connectedDrives) {
         Format-Volume -DriveLetter $drive -FileSystem FAT32 -NewFileSystemLabel BOOTME -Confirm:$true
+        
     }
 }
+Write-Host "All drives were formatted."
