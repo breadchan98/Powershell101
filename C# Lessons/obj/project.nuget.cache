@@ -1,14 +1,18 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "HH8FTqLWaXg=",
   "success": true,
   "projectFilePath": "C:\\Users\\v-bbuenarte\\OneDrive - Microsoft\\Desktop\\Work\\Powershell101\\C# Lessons\\C# Lessons.csproj",
-=======
-  "dgSpecHash": "uIy7tpK35kw=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\bred-pc\\Desktop\\Powershell101\\Powershell101\\C# Lessons\\C# Lessons.csproj",
->>>>>>> 759bffa3825330ef0feea3f08f07215ad53ac982
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file C:\\Users\\v-bbuenarte\\OneDrive - Microsoft\\Desktop\\Work\\Powershell101\\C# Lessons\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\v-bbuenarte\\OneDrive - Microsoft\\Desktop\\Work\\Powershell101\\C# Lessons\\C# Lessons.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\v-bbuenarte\\OneDrive - Microsoft\\Desktop\\Work\\Powershell101\\C# Lessons\\C# Lessons.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
