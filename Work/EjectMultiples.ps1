@@ -4,7 +4,7 @@ Set-StrictMode -Version Latest
 $connectedDrives = (Read-Host "Enter drive letters (space separated)") -split '\s+'
 
 $confirm = Read-Host "Eject all drives? Type Y to Continue or press any key to skip"
-$shell = New-Object -ComObject Shell.Application
+
 #eject all plugged USB drives
 if ($confirm -eq "N") {
     Write-Host "Stopping. Double check first."
