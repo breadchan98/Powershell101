@@ -13,7 +13,7 @@ if ($confirm -eq "N") {
 if ($confirm -eq "Y") {
     foreach ($drive in $connectedDrives) {
         $shell = New-Object -ComObject Shell.Application
-        $driveL = $shell.Namespace(17).ParseName($drive)
+        $driveL = $shell.Namespace(17).ParseName("${drive}:")
 
         #trigger the eject to WinExplorer
         $driveL.InvokeVerb('Eject')
