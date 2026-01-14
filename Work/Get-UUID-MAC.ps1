@@ -22,6 +22,15 @@ else {
 $machineName = Read-Host "Enter name of machine"
 New-Item -Path "$directoryPath\$machineName.txt" -ItemType File
 
+#Create MAC Log Order
+$macLogDir = "${driveLetter}:\$ritmNum\MAC logs"
+if(Test-Path $macLogDir) {
+    Write-Output "$macLogDir exists"
+}
+else {
+    New-Item -Path $macLogDir -ItemType Directory
+}
+
 #Creating separate mac log for extracting
 $ipAddress = cmd.exe /c "ipconfig /all"
 New-Item -Path "$directoryPath\MAC logs\$machineName.MAC.txt" -ItemType File
