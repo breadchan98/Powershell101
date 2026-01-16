@@ -13,3 +13,18 @@ C:\Users\bred-pc\Desktop\Powershell101\Powershell101\C# Lessons\obj\Debug\net9.0
 C:\Users\bred-pc\Desktop\Powershell101\Powershell101\C# Lessons\obj\Debug\net9.0\C# Lessons.pdb
 C:\Users\bred-pc\Desktop\Powershell101\Powershell101\C# Lessons\obj\Debug\net9.0\C# Lessons.genruntimeconfig.cache
 C:\Users\bred-pc\Desktop\Powershell101\Powershell101\C# Lessons\obj\Debug\net9.0\ref\C# Lessons.dll
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\bin\Debug\net9.0\C# Lessons.exe
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\bin\Debug\net9.0\C# Lessons.deps.json
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\bin\Debug\net9.0\C# Lessons.runtimeconfig.json
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\bin\Debug\net9.0\C# Lessons.dll
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\bin\Debug\net9.0\C# Lessons.pdb
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\obj\Debug\net9.0\C# Lessons.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\obj\Debug\net9.0\C# Lessons.AssemblyInfoInputs.cache
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\obj\Debug\net9.0\C# Lessons.AssemblyInfo.cs
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\obj\Debug\net9.0\C# Lessons.csproj.CoreCompileInputs.cache
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\obj\Debug\net9.0\C# Lessons.sourcelink.json
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\obj\Debug\net9.0\C# Lessons.dll
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\obj\Debug\net9.0\refint\C# Lessons.dll
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\obj\Debug\net9.0\C# Lessons.pdb
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\obj\Debug\net9.0\C# Lessons.genruntimeconfig.cache
+C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\obj\Debug\net9.0\ref\C# Lessons.dll
