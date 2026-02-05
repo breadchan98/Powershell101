@@ -4,9 +4,11 @@ Set-StrictMode -Version Latest
     Faster to go local, network wack
 #>
 
-$blackrockShared = "C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Blackrock IMG\"
+$blackrockShared = "C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\SP11XGA_11212025\"
 
 $connectedDrives = (Read-Host "Enter drive letters (space separated)") -split '\s+'
+
+$confirm = Read-Host "Format all drives? Type Y to Continue or press any key to skip"
 
 #formats all plugged USB drives
 if ($confirm -eq "N") {
@@ -26,3 +28,4 @@ $connectedDrives | ForEach-Object -Parallel {
     Robocopy.exe $using:blackrockShared $destination /E /Z /R:1 /W:1 /MT:8
     Write-Host "Completed adding files to $destination"
 }
+
