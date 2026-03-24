@@ -1,7 +1,7 @@
 Set-StrictMode -Version Latest
 
 
-$connectedDrives = (Read-Host "Enter drive letters (space separated)") -split '\s+'
+$connectedDrives = Get-Disk | Where-Object BusType -eq USB | Get-Partition | Where-Object DriveLetter | Select-Object -ExpandProperty DriveLetter
 
 $confirm = Read-Host "Eject all drives? Type Y to Continue or press any key to skip"
 

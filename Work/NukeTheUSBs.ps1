@@ -1,11 +1,5 @@
 Set-StrictMode -Version Latest
 
-<#
-    Faster to go local, network wack
-#>
-
-$blackrockShared = "C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Cadmus_USB_Network_Recovery_V4.2_NoWTT_SP11XGA_11212025\"
-
 #get all USB drive letters
 $connectedDrives = Get-Disk | Where-Object BusType -eq USB | Get-Partition | Where-Object DriveLetter | Select-Object -ExpandProperty DriveLetter
 
@@ -21,12 +15,26 @@ if ($confirm -eq "Y") {
         Format-Volume -DriveLetter $drive -FileSystem FAT32 -NewFileSystemLabel BOOTME -Confirm:$true
     }
 }
-
 Write-Host "All drives were formatted."
+<#
+$confirm2 = Read-Host "Eject all drives? Type Y to Continue or press any key to skip"
 
-$connectedDrives | ForEach-Object -Parallel {
-    $destination = "$($_):\"
-    Robocopy.exe $using:blackrockShared $destination /E /Z /R:1 /W:1 /MT:8
-    Write-Host "Completed adding files to $destination"
+
+
+#eject all plugged USB drives
+if ($confirm2 -eq "N") {
+    Write-Host "Stopping. Double check first."
+    break
 }
+if ($confirm2 -eq "Y") {
+    foreach ($drive in $connectedDrives) {
+        $shell = New-Object -ComObject Shell.Application
+        $driveL = $shell.Namespace(17).ParseName("${drive}:")
 
+        #trigger the eject to WinExplorer
+        $driveL.InvokeVerb('Eject')
+    }
+}
+Write-Host "All drives were ejected."
+
+#>

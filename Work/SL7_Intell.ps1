@@ -4,7 +4,7 @@ Set-StrictMode -Version Latest
     Faster to go local, network wack
 #>
 
-$blackrockShared = "C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Cadmus_USB_Network_Recovery_V4.2_NoWTT_SP11XGA_11212025\"
+$blackrockShared = "C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\SL7_Intel\USBv4_Network_Recovery_NoWTT_SL7\"
 
 #get all USB drive letters
 $connectedDrives = Get-Disk | Where-Object BusType -eq USB | Get-Partition | Where-Object DriveLetter | Select-Object -ExpandProperty DriveLetter

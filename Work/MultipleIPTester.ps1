@@ -26,6 +26,8 @@ $ips = @(
     "10.178.45.47"
 )
 
+
+
 # Ping in parallel
 $results = $ips | ForEach-Object -Parallel {
     if (Test-Connection $_ -Count 1 -Quiet) {
@@ -34,5 +36,5 @@ $results = $ips | ForEach-Object -Parallel {
         "$_ is offline"
     }
 }
-
+Write-Output "The following IPs: `n"
 $results
