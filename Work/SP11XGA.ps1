@@ -14,7 +14,7 @@ $confirm = Read-Host "Format all drives? Type Y to Continue or press any key to 
 #formats all plugged USB drives
 if ($confirm -eq "N") {
     Write-Host "Stopping. Double check first."
-    break
+    continue
 }
 if ($confirm -eq "Y") {
     foreach ($drive in $connectedDrives) {
