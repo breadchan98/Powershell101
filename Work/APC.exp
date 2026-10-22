@@ -1,0 +1,62 @@
+#!/usr/bin/expect -f
+set timeout 10
+
+set host "192.168.1.100"
+set user "apc"
+set pass "yourpassword"
+set csv_file "outlets.csv"
+
+spawn ssh $user@$host
+
+expect "password:"
+send "$pass\r"
+
+set fp [open $csv_file r]
+gets $fp header
+
+while {[gets $fp line] >= 0} {
+    set fields [split $line ","]
+    set outlet_num [lindex $fields 0]
+    set outlet_name [lindex $fields 1]
+
+    puts "Updating outlet $outlet_num to $outlet_name"
+
+    expect ">"
+    send "1\r"
+
+    expect ">"
+    send "2\r"
+
+    expect ">"
+    send "$outlet_num\r"
+
+    expect ">"
+    send "\r"
+
+    expect ">"
+    send "1\r"
+
+    expect ">"
+    send "2\r"
+
+    expect ">"
+    send "1\r"
+
+    expect "Outlet Name:"
+    send "$outlet_name\r"
+
+    expect ">"
+    send "5\r"
+
+    expect ">"
+    send "\033"
+
+    expect ">"
+    send "\033"
+
+    expect ">"
+    send "\r"
+}
+
+close $fp
+interact

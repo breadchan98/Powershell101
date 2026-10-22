@@ -8,6 +8,7 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = C__Lessons
 build_property.ProjectDir = C:\Users\v-bbuenarte\OneDrive - Microsoft\Desktop\Work\Powershell101\C# Lessons\
